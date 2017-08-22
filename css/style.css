@@ -1,0 +1,1438 @@
+@charset "UTF-8";
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #efefef;
+  color: #000000; }
+
+@font-face {
+  font-family: "SanFrancisco";
+  src: url("../fonts/sanfranciscodisplay-regular-webfont.woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "SanFrancisco";
+  src: url("../fonts/sanfranciscodisplay-bold-webfont.woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSansSemiBold.woff");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSansSemiBoldItalic.woff");
+  font-weight: bold;
+  font-style: italic; }
+a {
+  font-family: "OpenSans";
+  font-size: 12px;
+  color: #ffffff;
+  text-decoration: none; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.number-of-news,
+button,
+h2,
+h3,
+span {
+  font-family: "SanFrancisco"; }
+
+.price {
+  font-family: "SanFrancisco";
+  font-size: 14px;
+  color: #000000; }
+
+.user-block {
+  width: 1215px;
+  margin: 0 auto;
+  padding: 10px 35px 13px 30px;
+  background-color: #000000; }
+  .user-block-left {
+    float: left; }
+  .user-block-right {
+    margin: 0;
+    padding: 0;
+    float: right; }
+
+.icon-men {
+  margin-right: 7px; }
+
+.login {
+  margin-right: 10px;
+  position: relative; }
+  .login:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 9px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 38px;
+    bottom: 4px; }
+
+.cart {
+  margin: 0;
+  padding: 0;
+  float: right;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  position: relative;
+  top: 3px; }
+
+.items-in-cart {
+  display: inline-block; }
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background: #4cff5c;
+  border-radius: 50%;
+  margin-right: 7px;
+  text-align: center;
+  font-family: "OpenSans";
+  font-size: 10px;
+  line-height: 20px;
+  color: #000000;
+  display: inline-block; }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.conteiner {
+  width: 1217px;
+  margin: 0 auto;
+  padding: 19px 30px 15px 33px;
+  background-color: #4cff5c; }
+  .conteiner-block-left {
+    float: left; }
+  .conteiner-block-right {
+    float: right; }
+
+.store-name h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  color: #000000;
+  text-decoration: line-through; }
+.store-name span {
+  font-size: 11px;
+  color: #2c9535;
+  color: rgba(0, 0, 0, 0.5);
+  display: block;
+  margin-top: -2px; }
+
+.main-navigation {
+  display: inline-block;
+  margin-right: 30px;
+  /*horizontal alignment the following blocks: Clothing/Sneakers/Blog/SayHello*/ }
+  .main-navigation > ul > li {
+    display: inline-block; }
+
+/*menu styling: Clothing/Sneakers/Blog/SayHello*/
+.menu-list a, .menu-drop > li > a {
+  font-family: "SanFrancisco";
+  font-size: 14px;
+  padding: 10px;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+
+.menu-list {
+  position: relative;
+  width: 100px; }
+  .menu-list a {
+    color: #000000; }
+    .menu-list a:hover {
+      background: #2c9535;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      border-bottom: 1px solid #ffffff;
+      color: #ffffff;
+      padding: 10px 0 10px 5px; }
+
+/*menu-drop styling*/
+.menu-drop {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  border-top: 3px solid transparent; }
+  .menu-drop a:hover {
+    background: #606060;
+    padding: 10px 0 10px 5px; }
+  .menu-drop > li > a {
+    color: #ffffff;
+    background: #272727;
+    border-radius: 3px;
+    border-bottom: 1px solid #606060; }
+
+/*z-index=10 visualizes a menu-drop ABOVE a slaider "gallery"*/
+.menu-list:hover .menu-drop {
+  opacity: 1;
+  left: 0;
+  position: absolute;
+  z-index: 10; }
+
+/*triangles drawing*/
+.clothing, .sneakers {
+  /*triangles rotation*/ }
+  .clothing::after, .sneakers::after {
+    content: "";
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: #000000 transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 12px; }
+  .clothing:hover::after, .sneakers:hover::after {
+    -webkit-transform: scaley(-1);
+            transform: scaley(-1);
+    border-color: #ffffff transparent transparent transparent; }
+
+.search {
+  display: inline-block;
+  height: 45px; }
+
+input[name="search"] {
+  position: relative;
+  width: 205px;
+  min-height: 30px;
+  background: #2c9535;
+  background: rgba(0, 0, 0, 0.1);
+  border: 0;
+  border-radius: 3px;
+  padding: 5px 50px 5px 20px;
+  font-family: "SanFrancisco";
+  font-size: 14px;
+  color: #000000; }
+
+/*loup icon drawing*/
+.loupe {
+  width: 10px;
+  height: 10px;
+  border: 3px solid #000000;
+  border-radius: 50%;
+  position: relative;
+  right: -245px;
+  top: -29px; }
+  .loupe::after {
+    content: "";
+    width: 9px;
+    height: 3px;
+    position: absolute;
+    right: -8px;
+    bottom: -4px;
+    background: #000000;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+
+/*z-index=0 -> menu-drop is ABOVE a slaider "gallery"*/
+.gallery {
+  width: 1280px;
+  min-height: 680px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  z-index: 0;
+  /*radio buttons are hidden*/
+  /*set the "div" size which contains "img"*/ }
+  .gallery > input {
+    display: none;
+    /*target buttons styling, position:relative is used as z-index DOES NOT WORK with position:absolute, z-index=100 allows the target bittons be above "img"*/ }
+    .gallery > input:checked + label {
+      background: #4cff5c; }
+    .gallery > input + label {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 4px;
+      background: #9b9b9b;
+      border: 2px solid #9b9b9b;
+      cursor: pointer;
+      position: relative;
+      top: 320px;
+      left: -250px;
+      margin-right: 10px;
+      -webkit-transition: background 0.8s ease-out 0s;
+      transition: background 0.8s ease-out 0s;
+      z-index: 100; }
+      .gallery > input + label:hover {
+        background: #ffffff; }
+  .gallery > div {
+    width: 1280px;
+    min-height: 680px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    /*"img" is absolutely switched off and does not respond to mouse clicks*/
+    visibility: hidden;
+    /*"img" is transparent*/
+    opacity: 0;
+    -webkit-transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 1s;
+    transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 1s; }
+    .gallery > div > .title {
+      width: 380px;
+      height: 180px;
+      background: #ffffff;
+      position: absolute;
+      top: 302px;
+      left: 118px;
+      text-align: center;
+      color: #000000; }
+  .gallery > input:checked + label + div {
+    visibility: visible;
+    /*"img" is visible*/
+    opacity: 1;
+    -webkit-transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
+    transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s; }
+
+.title h2 {
+  display: block;
+  width: 279px;
+  min-height: 100px;
+  text-align: left;
+  padding-left: 30px;
+  padding-top: 17px;
+  font-size: 40px;
+  color: #000000; }
+.title span {
+  position: absolute;
+  left: 30px;
+  top: 21px;
+  font-family: "OpenSans";
+  font-size: 12px;
+  color: #9b9b9b; }
+
+.btn {
+  background: #efefef;
+  /*cancel default "button" styling*/
+  border: 0;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .btn:hover {
+    background: #4cff5c; }
+
+.next::after, .prev::after {
+  content: "";
+  border-style: solid;
+  position: absolute;
+  top: 16px;
+  right: 18px; }
+
+/*button that switches the slides forward*/
+.next {
+  position: absolute;
+  top: 302px;
+  left: 497px;
+  border-radius: 0 3px 0 0; }
+  .next::after {
+    border-width: 6px 0 6px 6px;
+    border-color: transparent transparent transparent #000000; }
+
+/*button that switches the slides back*/
+.prev {
+  position: absolute;
+  top: 346px;
+  left: 497px;
+  border-radius: 0 0 3px 0; }
+  .prev::after {
+    border-width: 6px 6px 6px 0;
+    border-color: transparent #000000 transparent transparent; }
+
+.view-product {
+  font-family: "SanFrancisco";
+  font-size: 14px;
+  color: #4cff5c;
+  padding: 21px 100px 21px 38px;
+  background: #000000;
+  border-radius: 0 0 3px 3px;
+  position: absolute;
+  top: 486px;
+  left: 118px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .view-product:hover {
+    color: #000000;
+    background: #4cff5c; }
+  .view-product::after {
+    content: "";
+    border-style: solid;
+    border-width: 6px 0 6px 6px;
+    border-color: transparent transparent transparent #4cff5c;
+    position: absolute;
+    top: 24px;
+    right: 27px; }
+
+/*the main content of the page*/
+.content {
+  width: 1042px;
+  margin: 0 auto;
+  padding: 74px 120px 72px 118px;
+  background-color: #efefef; }
+
+.featured-products {
+  margin: 0;
+  padding: 0;
+  display: block;
+  margin-bottom: 47px;
+  font-family: "SanFrancisco";
+  font-size: 30px;
+  color: #000000; }
+
+.footwear {
+  width: 506px;
+  margin-bottom: 22px;
+  float: left; }
+
+.product-1 > .price, .product-3 > .price, .cannon > .price {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  display: block;
+  padding: 2px 15px 2px 11px;
+  background-color: #4cff5c;
+  border-radius: 0 15px 15px 0;
+  color: #000000; }
+
+.product-4-photo > .price, .product-5-photo > .price, .product-6-photo > .price {
+  position: absolute;
+  top: 12px;
+  left: 100px;
+  display: block;
+  width: 45px;
+  padding-left: 71px;
+  padding-bottom: 2px;
+  background-color: #4cff5c;
+  border-radius: 0 15px 15px 0;
+  z-index: -1; }
+
+.product-1 button, .product-2 button, .product-3 button, .product-4 button, .product-5 button, .product-6 button, .cannon button {
+  width: 116px;
+  height: 25px;
+  border: 1px solid #9b9b9b;
+  border-radius: 15px;
+  display: block;
+  background-color: #ffffff;
+  text-align: right;
+  padding-right: 20px;
+  font-size: 10px;
+  color: #000000;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .product-1 button:hover, .product-2 button:hover, .product-3 button:hover, .product-4 button:hover, .product-5 button:hover, .product-6 button:hover, .cannon button:hover {
+    color: #4cff5c; }
+
+.product-1-description button > img, .product-2 button > img, .product-3 button > img, .product-4 button > img, .product-5 button > img, .product-6 button > img, .cannon-description button > img {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 10px;
+  top: 6px; }
+
+.product-1-description > button::before, .product-2 > button::before, .product-3 > button::before, .product-4 > button::before, .product-5 > button::before, .product-6 > button::before, .cannon-description > button::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 23px;
+  background-color: #9b9b9b;
+  position: absolute;
+  top: 0;
+  left: 30px; }
+
+.product-1 {
+  width: 496px;
+  height: 308px;
+  padding-right: 10px;
+  margin-bottom: 39px;
+  background-color: #ffffff;
+  position: relative; }
+  .product-1 img {
+    width: 284px;
+    height: 219px;
+    float: left;
+    position: relative;
+    top: 54px;
+    left: 0; }
+  .product-1 button {
+    margin-top: 16px; }
+  .product-1-description {
+    width: 185px;
+    margin-top: 37px;
+    float: left; }
+    .product-1-description span {
+      font-family: "OpenSans";
+      font-size: 12px;
+      color: #9b9b9b; }
+    .product-1-description h3 {
+      display: block;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      font-size: 20px;
+      color: #000000; }
+    .product-1-description a {
+      font-size: 12px;
+      color: #000000; }
+
+.product-2 {
+  width: 239px;
+  padding-bottom: 14px;
+  background-color: #ffffff;
+  float: left;
+  position: relative; }
+  .product-2 img {
+    width: 239px;
+    height: 219px;
+    display: block; }
+  .product-2 span {
+    padding: 3px 14px;
+    display: block;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 40px;
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #9b9b9b;
+    position: absolute;
+    top: 22px;
+    left: 66px; }
+  .product-2 h3 {
+    display: block;
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #000000; }
+  .product-2 button {
+    margin: 0 auto; }
+
+.product-3 {
+  width: 239px;
+  padding-bottom: 14px;
+  background-color: #e5eaed;
+  float: right;
+  position: relative;
+  padding-top: 31px; }
+  .product-3 img {
+    width: 239px;
+    height: 189px;
+    display: block; }
+  .product-3 > .adidas {
+    display: block;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 40px;
+    padding: 3px 15px;
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #9b9b9b;
+    position: absolute;
+    top: 24px;
+    left: 72px; }
+  .product-3 h3 {
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: #000000; }
+  .product-3 button {
+    margin: 0 auto;
+    background-color: gallery-color-dark; }
+
+.product-4 {
+  display: inline-block;
+  text-align: center;
+  margin-right: 222px; }
+  .product-4 h3 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: #000000; }
+  .product-4-photo {
+    width: 236px;
+    height: 120px;
+    position: absolute;
+    top: 16px;
+    left: 60px;
+    z-index: 2; }
+  .product-4 button {
+    margin: 0 auto; }
+
+.product-5 {
+  display: inline-block;
+  text-align: center;
+  margin-right: 222px; }
+  .product-5 h3 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: #000000; }
+  .product-5-photo {
+    width: 219px;
+    height: 113px;
+    position: absolute;
+    top: 20px;
+    left: 400px;
+    z-index: 2; }
+  .product-5 button {
+    margin: 0 auto; }
+
+.product-6 {
+  display: inline-block;
+  text-align: center; }
+  .product-6 h3 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: #000000; }
+  .product-6-photo {
+    width: 201px;
+    height: 113px;
+    position: absolute;
+    top: 20px;
+    left: 750px;
+    z-index: 2; }
+  .product-6 button {
+    margin: 0 auto; }
+
+.cannon {
+  width: 506px;
+  margin: 0;
+  padding: 0;
+  float: right;
+  position: relative; }
+  .cannon img {
+    width: 506px;
+    height: 654px;
+    display: block; }
+  .cannon-description {
+    padding: 15px 34px 16px 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #2c9535;
+    background: rgba(0, 0, 0, 0.5); }
+    .cannon-description span {
+      font-family: "OpenSans";
+      font-size: 12px;
+      color: #9b9b9b; }
+    .cannon-description h3 {
+      display: block;
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 30px;
+      line-height: 32px;
+      color: #ffffff; }
+    .cannon-description button {
+      margin-top: 16px;
+      background: #2c9535;
+      background: rgba(0, 0, 0, 0.5);
+      color: #ffffff; }
+
+.stefan-janoski {
+  width: 1042px;
+  padding-bottom: 110px;
+  position: relative; }
+  .stefan-janoski > img {
+    width: 1042px;
+    height: 495px;
+    display: block; }
+  .stefan-janoski > img + button {
+    display: inline-block;
+    position: absolute;
+    top: 143px;
+    left: 480px;
+    background: #1a1a1a;
+    opacity: 0.9;
+    border: 0;
+    border-radius: 40px;
+    width: 98px;
+    height: 23px;
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #4cff5c;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .stefan-janoski > img + button:hover {
+      opacity: 1;
+      color: #ffffff; }
+  .stefan-janoski > button + span {
+    display: inline-block;
+    position: absolute;
+    top: 175px;
+    left: 225px;
+    font-family: "SanFrancisco";
+    font-size: 60px;
+    color: #4cff5c; }
+
+.product-4-5-6-photo {
+  width: 980px;
+  height: 120px;
+  padding: 12px 0 12px 62px;
+  position: absolute;
+  bottom: 190px;
+  left: 0;
+  /*in case if rgba does not work*/
+  background: #e5eaed;
+  /*for IE8*/
+  background: rgba(255, 255, 255, 0.64); }
+
+.product-4-5-6 {
+  padding: 10px 0 12px 117px;
+  background-color: #ffffff; }
+
+.spring-preview {
+  width: 1280px;
+  margin-bottom: 65px;
+  position: relative;
+  left: -118px; }
+  .spring-preview .img {
+    width: 1280px;
+    height: 550px;
+    background: url("../img/spring-2016-preview.png") no-repeat center top;
+    background-size: cover; }
+  .spring-preview span {
+    display: inline-block;
+    position: absolute;
+    top: 180px;
+    left: 360px;
+    font-size: 60px;
+    color: #ffffff; }
+  .spring-preview > a {
+    display: inline-block;
+    width: 730px;
+    text-align: center;
+    position: absolute;
+    top: 270px;
+    left: 280px;
+    font-size: 22px; }
+  .spring-preview button {
+    display: inline-block;
+    position: absolute;
+    top: 355px;
+    left: 570px;
+    background: #4cff5c;
+    opacity: 0.9;
+    border: 0;
+    border-radius: 40px;
+    width: 139px;
+    height: 29px;
+    font-size: 10px;
+    color: #000000;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .spring-preview button:hover {
+      opacity: 1;
+      color: #ffffff; }
+  .spring-preview .img-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 216, 0, 0.2); }
+
+.latest-news span {
+  margin: 0;
+  padding: 0;
+  display: block;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 30px;
+  color: #000000; }
+.latest-news button {
+  background: #4cff5c;
+  opacity: 0.9;
+  border: 0;
+  border-radius: 3px;
+  width: 1041px;
+  height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .latest-news button:hover {
+    opacity: 1;
+    color: #ffffff; }
+
+.scate, .surf, .music {
+  width: 328px;
+  background: #ffffff;
+  position: relative; }
+
+.scate img, .surf img, .music img {
+  width: 328px;
+  height: 210px;
+  display: block; }
+
+.scate > img + span, .surf > img + span, .music > img + span {
+  margin: 0;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  padding: 2px 20px 4px 15px;
+  border-radius: 0 15px 15px 0;
+  font-size: 14px;
+  color: #ffffff; }
+
+.scate h3, .surf h3, .music h3 {
+  margin: 0;
+  display: block;
+  /*"height" is neсessary to align "a" */
+  height: 56px;
+  padding: 14px 18px 0 60px;
+  font-size: 18px;
+  color: #000000; }
+
+.scate a, .surf a, .music a {
+  margin: 0;
+  display: block;
+  padding-left: 60px;
+  padding-right: 18px;
+  padding-bottom: 16px;
+  font-size: 12px;
+  color: #000000; }
+
+.scate {
+  float: left;
+  margin-right: 28px;
+  margin-bottom: 40px; }
+  .scate > img + span {
+    background: #336af2; }
+
+.surf {
+  float: left;
+  margin-right: 28px;
+  margin-bottom: 40px; }
+  .surf > img + span {
+    background: #9012fe; }
+
+.music {
+  float: right; }
+  .music > img + span {
+    background: #f92b60; }
+
+.number-of-news {
+  padding: 3px 7px;
+  background: #4cff5c;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 95px;
+  left: 18px;
+  text-align: center;
+  font-size: 12px;
+  color: #000000;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .number-of-news::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 8px solid #4cff5c;
+    border-right: 8px solid transparent;
+    position: absolute;
+    top: 20px;
+    left: 5px; }
+
+.footer-sign-up {
+  width: 1004px;
+  margin: 0 auto;
+  padding: 37px 0 43px 276px;
+  background-color: #272727; }
+  .footer-sign-up div {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 100px; }
+  .footer-sign-up form {
+    display: inline-block;
+    vertical-align: top; }
+  .footer-sign-up p {
+    margin: 0;
+    padding: 0;
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #606060; }
+  .footer-sign-up span {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: #ffffff;
+    display: block;
+    margin-top: 3px; }
+
+.sign-up {
+  position: relative;
+  width: 282px;
+  height: 52px;
+  border-radius: 3px;
+  overflow: hidden; }
+  .sign-up input {
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #ffffff;
+    /*cancel default "input" styling*/
+    border: 0;
+    width: 186px;
+    padding: 20px;
+    background: #3d3d3d;
+    background: rgba(255, 255, 255, 0.1);
+    float: left; }
+  .sign-up button {
+    background: #505050;
+    background: rgba(255, 255, 255, 0.2);
+    /*cancel default "button" styling*/
+    border: 0;
+    cursor: pointer;
+    width: 56px;
+    height: 52px;
+    float: left; }
+    .sign-up button::after {
+      content: "";
+      border-style: solid;
+      border-width: 12px 0 12px 12px;
+      border-color: transparent transparent transparent #000000;
+      position: absolute;
+      top: 16px;
+      right: 21px; }
+
+.footer-contact-info {
+  width: 1162px;
+  margin: 0 auto;
+  padding: 49px 0 80px 118px;
+  background-color: #000000; }
+
+.footer-company {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 58px; }
+  .footer-company span {
+    font-family: "SanFrancisco";
+    font-size: 14px;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 25px; }
+  .footer-company li {
+    display: block;
+    margin-bottom: 5px; }
+  .footer-company a {
+    font-family: "SanFrancisco";
+    font-size: 12px;
+    color: #606060;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .footer-company a:hover {
+      color: #ffffff; }
+.footer-contacts {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 121px; }
+  .footer-contacts h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    color: #ffffff;
+    text-decoration: line-through;
+    display: block;
+    margin-bottom: 9px; }
+.footer-social {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 283px; }
+.footer-support {
+  display: inline-block;
+  vertical-align: top; }
+  .footer-support span {
+    font-family: "SanFrancisco";
+    font-size: 14px;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 25px; }
+  .footer-support li {
+    display: block;
+    margin-bottom: 5px; }
+  .footer-support a {
+    font-family: "SanFrancisco";
+    font-size: 12px;
+    color: #606060;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .footer-support a:hover {
+      color: #ffffff; }
+
+.footer-contacts span,
+.footer-copyright,
+.footer-email {
+  font-family: "OpenSans";
+  font-size: 12px;
+  color: #606060;
+  display: block;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .footer-contacts span:hover,
+  .footer-copyright:hover,
+  .footer-email:hover {
+    color: #ffffff; }
+
+.payment-btn {
+  display: inline-block;
+  font-size: 0;
+  vertical-align: top;
+  margin-top: 16px;
+  margin-bottom: 47px; }
+  .payment-btn-paypal {
+    width: 32px;
+    height: 21px;
+    background: #000000 url("../img/paypal.png") no-repeat center;
+    margin-right: 22px; }
+  .payment-btn-mastercard {
+    width: 32px;
+    height: 21px;
+    background: #000000 url("../img/mastercard.png") no-repeat center;
+    margin-right: 27px; }
+  .payment-btn-visa {
+    width: 32px;
+    height: 21px;
+    background: #000000 url("../img/visa.png") no-repeat center; }
+
+.social-btn {
+  display: inline-block;
+  font-size: 0;
+  vertical-align: top;
+  text-decoration: none; }
+  .social-btn-fb {
+    width: 8px;
+    height: 16px;
+    background: #000000 url("../img/facebook.png") no-repeat center;
+    margin-right: 36px; }
+  .social-btn-tw {
+    width: 19px;
+    height: 15px;
+    background: #000000 url("../img/twitter.png") no-repeat center;
+    margin-right: 30px; }
+  .social-btn-ig {
+    width: 16px;
+    height: 17px;
+    background: #000000 url("../img/instagram.png") no-repeat center;
+    margin-right: 35px; }
+  .social-btn-rss {
+    width: 16px;
+    height: 16px;
+    background: #000000 url("../img/rss.png") no-repeat center; }
+  .social-btn:hover {
+    cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */

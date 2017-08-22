@@ -1,0 +1,39 @@
+//сolours
+$primary-dark: #000000;
+$primary-light: #ffffff;
+$primary-mid: #9b9b9b;
+$secondary-dark: #272727;
+$secondary-light: #efefef;
+$secondary-mid: #606060;
+$accent: #4cff5c;
+$accent-dark: #2c9535;
+$add-color-1: #e5eaed;
+$skate: #336af2;
+$surf: #9012fe;
+$music: #f92b60;
+
+//functional variables
+//text color
+$text-color-dark: $primary-dark;
+$text-color-light: $primary-light;
+$text-color-brend: $primary-mid;
+$text-color-accent: $accent;
+$text-color-footer: $secondary-mid;
+//background color
+$page-background: $secondary-light;
+$header-color-top: $primary-dark;
+$header-color-nav: $accent;
+$gallery-color-dark: $add-color-1;
+$gallery-color-light: $primary-light;
+$drop-dark: $secondary-dark;
+$drop-light: $secondary-mid;
+$btn-next-prev: $secondary-light;
+$footer-color-top: $secondary-dark;
+$footer-color-contact: $primary-dark;
+
+//element color
+$element-dark: $primary-dark;
+$element-light: $primary-light;
+$accent-color: $accent;
+$forIE8: $accent-dark;
+$btn-border: $primary-mid;

@@ -1,0 +1,1238 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #b7bac3;
+    color: #000000;
+}
+
+@font-face {
+    font-family: "SanFrancisco";
+    src: url("../fonts/sanfranciscodisplay-regular-webfont.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SanFrancisco";
+    src: url("../fonts/sanfranciscodisplay-bold-webfont.woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/OpenSansSemiBold.woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/OpenSansSemiBoldItalic.woff");
+    font-weight: bold;
+    font-style: italic;
+}
+
+a {
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+h2, h3, span, button, .number-of-news {
+    font-family: "SanFrancisco";
+}
+
+.price {
+    font-family: "SanFrancisco";
+    font-size: 14px;
+    color: #000000;
+}
+
+
+/* black block */
+
+.user-block {
+    width: 1215px;
+    margin: 0 auto;
+    padding: 10px 35px 13px 30px;
+    background-color: #000000;
+}
+
+.user-block-left {
+    float: left;
+}
+
+.icon-men {
+    margin-right: 7px;
+}
+
+.login {
+    margin-right: 10px;
+    position: relative;
+}
+
+.login:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 9px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 38px;
+    bottom: 4px;
+}
+
+.user-block-right, .cart {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.cart {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+}
+
+.circle, .items-in-cart {
+    display: inline-block;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background: #4cff5c;
+    border-radius: 50%;
+    margin-right: 7px;
+    text-align: center;
+    font-family: "OpenSans";
+    font-size: 10px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* green block */
+
+.conteiner {
+    width: 1217px;
+    margin: 0 auto;
+    padding: 19px 30px 15px 33px;
+    background-color: #4cff5c;
+}
+
+.conteiner-block-left {
+    float: left;
+}
+
+.store-name h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    color: #000000;
+    text-decoration: line-through;
+}
+
+.store-name span {
+    font-size: 11px;
+    color: #2c9535;
+    display: block;
+    margin-top: -2px;
+}
+
+.conteiner-block-right {
+    float: right;
+}
+
+.main-navigation, .search {
+    display: inline-block;
+}
+
+.main-navigation {
+    margin-right: 30px;
+}
+
+
+/*рorizontal alignment the following blocks: Clothing/Sneakers/Blog/SayHello*/
+
+.main-navigation>ul>li {
+    display: inline-block;
+}
+
+
+/*link styling*/
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/*menu styling: Clothing/Sneakers/Blog/SayHello*/
+
+.menu-list a {
+    font-family: "SanFrancisco";
+    font-size: 14px;
+    color: #000000;
+    padding: 10px;
+    display: block;
+    transition: 0.5s;
+}
+
+.menu-list a:hover {
+    /*in case if rgba does not work*/
+    background: #44e552;
+    background: rgba(0, 0, 0, 0.10);
+    border-radius: 3px;
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 0 10px 5px;
+}
+
+
+/*menu-drop styling*/
+
+.menu-drop>li>a {
+    font-family: "SanFrancisco";
+    font-size: 14px;
+    color: #ffffff;
+    background: #3d3d3d;
+    padding: 10px;
+    display: block;
+    border-radius: 3px;
+    border-bottom: 1px solid #666;
+    transition: 0.5s;
+}
+
+.menu-list {
+    position: relative;
+    width: 100px;
+}
+
+.menu-drop {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-top: 3px solid transparent;
+}
+
+
+/*z-index=10 visualizes a menu-drop ABOVE a slaider "gallery"*/
+
+.menu-list:hover .menu-drop {
+    opacity: 1;
+    left: 0;
+    position: absolute;
+    z-index: 10;
+}
+
+.menu-drop a:hover {
+    background: #666666;
+    padding: 10px 0 10px 5px;
+}
+
+
+/*triangles drawing*/
+
+.clothing::after, .sneakers::after {
+    content: "";
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: #000000 transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 12px;
+}
+
+
+/*triangles rotation*/
+
+.clothing:hover::after, .sneakers:hover::after {
+    transform: scaley(-1);
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.search {
+    height: 45px;
+}
+
+input[name="search"] {
+    position: relative;
+    width: 205px;
+    min-height: 30px;
+    /*in case if rgba does not work*/
+    background: #44e552;
+    background: rgba(0, 0, 0, 0.10);
+    border: 0;
+    border-radius: 3px;
+    padding: 5px 50px 5px 20px;
+    font-family: "SanFrancisco";
+    font-size: 14px;
+    color: #000000;
+}
+
+
+/*loup icon drawing*/
+
+.loupe {
+    width: 10px;
+    height: 10px;
+    border: 3px solid #000000;
+    border-radius: 50%;
+    position: relative;
+    right: -245px;
+    top: -29px;
+}
+
+.loupe::after {
+    content: "";
+    width: 9px;
+    height: 3px;
+    position: absolute;
+    right: -8px;
+    bottom: -4px;
+    background: #000000;
+    transform: rotate(45deg);
+}
+
+
+/* blue block*/
+
+
+/*z-index=0 -> menu-drop is ABOVE a slaider "gallery"*/
+
+.gallery {
+    width: 1280px;
+    min-height: 680px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    z-index: 0;
+}
+
+
+/*radio buttons are hidden*/
+
+.gallery>input {
+    display: none;
+}
+
+
+/*target buttons styling, position:relative is used as z-index DOES NOT WORK with position:absolute, z-index=100 allows the target bittons be above "img"*/
+
+.gallery>input+label {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 4px;
+    background: #bbbbbb;
+    border: 2px solid #bbbbbb;
+    cursor: pointer;
+    position: relative;
+    top: 320px;
+    left: -250px;
+    margin-right: 10px;
+    transition: background 0.8s ease-out 0s;
+    z-index: 100;
+}
+
+.gallery>input+label:hover {
+    background: #ffffff;
+}
+
+.gallery>input:checked+label {
+    background: #4cff5c;
+}
+
+
+/*set the "div" size which contains "img"*/
+
+.gallery>div {
+    width: 1280px;
+    min-height: 680px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.gallery>div {
+    /*"img" is absolutely switched off and does not respond to mouse clicks*/
+    visibility: hidden;
+    /*"img" is transparent*/
+    opacity: 0;
+    transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 1s;
+}
+
+.gallery>input:checked+label+div {
+    visibility: visible;
+    /*"img" is visible*/
+    opacity: 1;
+    transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
+}
+
+.gallery>div>.title {
+    width: 380px;
+    height: 180px;
+    background: #ffffff;
+    position: absolute;
+    top: 302px;
+    left: 118px;
+    text-align: center;
+    color: #000000;
+}
+
+.title h2 {
+    display: block;
+    width: 279px;
+    min-height: 100px;
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 17px;
+    font-size: 40px;
+    color: #000000;
+}
+
+.title span {
+    position: absolute;
+    left: 30px;
+    top: 21px;
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #9b9b9b;
+}
+
+.btn {
+    background: #ededed;
+    /*cancel default "button" styling*/
+    border: 0;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+}
+
+
+/*button that switches the slides forward*/
+
+.next {
+    position: absolute;
+    top: 302px;
+    left: 497px;
+    border-radius: 0 3px 0 0;
+}
+
+
+/*button that switches the slides back*/
+
+.prev {
+    position: absolute;
+    top: 346px;
+    left: 497px;
+    border-radius: 0 0 3px 0;
+}
+
+.next::after {
+    content: "";
+    border-style: solid;
+    border-width: 6px 0 6px 6px;
+    border-color: transparent transparent transparent #000000;
+    position: absolute;
+    top: 16px;
+    right: 18px;
+}
+
+.prev::after {
+    content: "";
+    border-style: solid;
+    border-width: 6px 6px 6px 0;
+    border-color: transparent #000000 transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 18px;
+}
+
+.view-product {
+    font-family: "SanFrancisco";
+    font-size: 14px;
+    color: #4cff5c;
+    padding: 21px 100px 21px 38px;
+    background: #000000;
+    border-radius: 0 0 3px 3px;
+    position: absolute;
+    top: 486px;
+    left: 118px;
+    cursor: pointer;
+}
+
+.view-product::after {
+    content: "";
+    border-style: solid;
+    border-width: 6px 0 6px 6px;
+    border-color: transparent transparent transparent #4cff5c;
+    position: absolute;
+    top: 24px;
+    right: 27px;
+}
+
+
+/*the main content of the page*/
+
+.content {
+    width: 1042px;
+    margin: 0 auto;
+    padding: 74px 120px 72px 118px;
+    background-color: #efefef;
+}
+
+.featured-products {
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-bottom: 47px;
+    font-family: "SanFrancisco";
+    font-size: 30px;
+    color: #000000;
+}
+
+.footwear {
+    width: 506px;
+    margin-bottom: 22px;
+    float: left;
+}
+
+
+/*common price label styling*/
+
+.product-1>.price, .product-3>.price, .cannon>.price {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    display: block;
+    padding: 2px 15px 2px 11px;
+    background-color: #4cff5c;
+    border-radius: 0 15px 15px 0;
+    color: #000000;
+}
+
+
+/*common button "Add to cart" styling*/
+
+.product-1 button, .product-2 button, .product-3 button, .cannon button, .product-4 button, .product-5 button, .product-6 button {
+    width: 116px;
+    height: 25px;
+    border: 1px solid #979797;
+    border-radius: 15px;
+    display: block;
+    /*margin-top: 16px;*/
+    background-color: #ffffff;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 10px;
+    color: #000000;
+    position: relative;
+    cursor: pointer;
+}
+
+.product-1 button {
+    margin-top: 16px;
+}
+
+.product-2 button, .product-3 button {
+    margin: 0 auto;
+}
+
+.product-3 button {
+    background-color: #e5eaed;
+}
+
+.cannon-description button {
+    margin-top: 16px;
+    background: #b9c0c6;
+    background: rgba(0, 0, 0, 0.50);
+    color: #ffffff;
+}
+
+.product-4 button, .product-5 button, .product-6 button {
+    margin: 0 auto;
+}
+
+.product-1-description button>img, .product-2 button>img, .product-3 button>img, .cannon-description button>img, .product-4 button>img, .product-5 button>img, .product-6 button>img {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 10px;
+    top: 6px;
+}
+
+.product-1-description>button::before, .product-2>button::before, .product-3>button::before, .cannon-description>button::before, .product-4>button::before, .product-5>button::before, .product-6>button::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 23px;
+    background-color: #979797;
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.product-1 {
+    width: 496px;
+    height: 308px;
+    padding-right: 10px;
+    margin-bottom: 39px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+
+/*if the picture does not appear, a block with the picture size will be in that place*/
+
+.product-1 img {
+    width: 284px;
+    height: 219px;
+    float: left;
+    position: relative;
+    top: 54px;
+    left: 0;
+}
+
+.product-1-description {
+    width: 185px;
+    margin-top: 37px;
+    float: left;
+}
+
+.product-1-description span {
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #9b9b9b;
+}
+
+.product-1-description h3 {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #000000;
+}
+.product-1-description a {
+    font-size: 12px;
+    color: #000000;
+}
+
+.product-2 {
+    width: 239px;
+    padding-bottom: 14px;
+    background-color: #ffffff;
+    float: left;
+    position: relative;
+}
+
+
+/*if the picture does not appear, a block with the picture size will be in that place*/
+
+.product-2 img {
+    width: 239px;
+    height: 219px;
+    display: block;
+}
+
+.product-2 span {
+    padding: 3px 14px 3px 14px;
+    display: block;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 40px;
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #9b9b9b;
+    position: absolute;
+    top: 22px;
+    left: 66px;
+}
+
+.product-2 h3 {
+    display: block;
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #000000;
+}
+
+.product-3 {
+    width: 239px;
+    padding-bottom: 14px;
+    background-color: #e5eaed;
+    float: right;
+    position: relative;
+    padding-top: 31px;
+}
+
+
+/*if the picture does not appear, a block with the picture size will be in that place*/
+
+.product-3 img {
+    width: 239px;
+    height: 189px;
+    display: block;
+}
+
+.product-3>.adidas {
+    display: block;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 40px;
+    padding: 3px 15px 3px 15px;
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #9b9b9b;
+    position: absolute;
+    top: 24px;
+    left: 72px;
+}
+
+.product-3 h3 {
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: #000000;
+}
+
+.cannon {
+    width: 506px;
+    margin: 0;
+    padding: 0;
+    float: right;
+    position: relative;
+}
+
+
+/*if the picture does not appear, a block with the picture size will be in that place*/
+
+.cannon img {
+    width: 506px;
+    height: 654px;
+    display: block;
+}
+
+.cannon-description {
+    padding: 15px 34px 16px 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #b9c0c6;
+    background: rgba(0, 0, 0, 0.50);
+}
+
+.cannon-description span {
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #9b9b9b;
+}
+
+.cannon-description h3 {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 30px;
+    line-height: 32px;
+    color: #ffffff;
+}
+
+
+/*stefan-janoski block*/
+
+.stefan-janoski {
+    width: 1042px;
+    padding-bottom: 110px;
+    position: relative;
+}
+
+.stefan-janoski>img {
+    width: 1042px;
+    height: 495px;
+    display: block;
+}
+
+.stefan-janoski>img+button {
+    display: inline-block;
+    position: absolute;
+    top: 143px;
+    left: 480px;
+    background: #1a1a1a;
+    border: 0;
+    border-radius: 40px;
+    width: 98px;
+    height: 23px;
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #4cff5c;
+    cursor: pointer;
+}
+
+.stefan-janoski>button+span {
+    display: inline-block;
+    position: absolute;
+    top: 175px;
+    left: 225px;
+    font-family: "SanFrancisco";
+    font-size: 60px;
+    color: #4cff5c;
+}
+
+.product-4-5-6-photo {
+    width: 980px;
+    height: 120px;
+    padding: 12px 0 12px 62px;
+    position: absolute;
+    bottom: 190px;
+    left: 0;
+    /*in case if rgba does not work*/
+    background: #b9c0c6;
+    background: rgba(255, 255, 255, 0.64);
+}
+
+.product-4-photo>.price, .product-5-photo>.price, .product-6-photo>.price {
+    position: absolute;
+    top: 12px;
+    left: 100px;
+    display: block;
+    width: 45px;
+    padding-left: 71px;
+    padding-bottom: 2px;
+    background-color: #4cff5c;
+    border-radius: 0 15px 15px 0;
+    z-index: -1;
+}
+
+.product-4-photo {
+    width: 236px;
+    height: 120px;
+    position: absolute;
+    top: 16px;
+    left: 60px;
+    z-index: 2;
+}
+
+.product-5-photo {
+    width: 219px;
+    height: 113px;
+    position: absolute;
+    top: 20px;
+    left: 400px;
+    z-index: 2;
+}
+
+.product-6-photo {
+    width: 201px;
+    height: 113px;
+    position: absolute;
+    top: 20px;
+    left: 750px;
+    z-index: 2;
+}
+
+.product-4-5-6 {
+    padding: 10px 0 12px 117px;
+    background-color: #ffffff;
+}
+
+.product-4, .product-5, .product-6 {
+    display: inline-block;
+    text-align: center;
+}
+
+.product-4, .product-5 {
+    margin-right: 222px;
+}
+
+.product-4 h3, .product-5 h3, .product-6 h3 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.spring-preview {
+    width: 1280px;
+    margin-bottom: 65px;
+    position: relative;
+    left: -118px;
+}
+
+.spring-preview .img {
+    width: 1280px;
+    height: 550px;
+    background: url(../img/spring-2016-preview.png) no-repeat center top;
+    background-size: cover;
+}
+
+.img-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 216, 0, 0.2);
+}
+
+.spring-preview span {
+    display: inline-block;
+    position: absolute;
+    top: 180px;
+    left: 360px;
+    font-size: 60px;
+    color: #ffffff;
+}
+
+.spring-preview>a {
+    display: inline-block;
+    width: 730px;
+    text-align: center;
+    position: absolute;
+    top: 270px;
+    left: 280px;
+    font-size: 22px;
+}
+
+.spring-preview button {
+    display: inline-block;
+    position: absolute;
+    top: 355px;
+    left: 570px;
+    background: #4cff5c;
+    border: 0;
+    border-radius: 40px;
+    width: 139px;
+    height: 29px;
+    font-size: 10px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.latest-news span {
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #000000;
+}
+
+.scate, .surf {
+    width: 328px;
+    background: #ffffff;
+    float: left;
+    margin-right: 28px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.music {
+    width: 328px;
+    background: #ffffff;
+    float: right;
+    position: relative;
+}
+
+.scate img, .surf img, .music img {
+    width: 328px;
+    height: 210px;
+    display: block;
+}
+
+.scate>img+span, .surf>img+span, .music>img+span {
+    margin: 0;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    padding: 2px 20px 4px 15px;
+    border-radius: 0 15px 15px 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.scate>img+span {
+    background: #336af2;
+}
+
+.surf>img+span {
+    background: #9012fe;
+}
+
+.music>img+span {
+    background: #f92b60;
+}
+
+.scate h3, .surf h3, .music h3 {
+    margin: 0;
+    display: block;
+    /*"height" is neсessary to align "a" */
+    height: 56px;
+    padding: 14px 18px 0 60px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.scate a, .surf a, .music a {
+    margin: 0;
+    display: block;
+    padding-left: 60px;
+    padding-right: 18px;
+    padding-bottom: 16px;
+    font-size: 12px;
+    color: #000000;
+}
+
+.number-of-news {
+    padding: 3px 7px 3px 7px;
+    background: #4cff5c;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 95px;
+    left: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: #000000;
+}
+
+.number-of-news::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 8px solid #4cff5c;
+    border-right: 8px solid transparent;
+    position: absolute;
+    top: 20px;
+    left: 5px;
+}
+
+.latest-news button {
+    background: #4cff5c;
+    border: 0;
+    border-radius: 3px;
+    width: 1041px;
+    height: 48px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/*footer*/
+
+.footer-sign-up {
+    width: 1004px;
+    margin: 0 auto;
+    padding: 37px 0 43px 276px;
+    background-color: #272727;
+}
+
+.footer-sign-up div, .footer-sign-up form {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-sign-up div {
+    margin-right: 100px;
+}
+
+.footer-sign-up p {
+    margin: 0;
+    padding: 0;
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #606060;
+}
+
+.footer-sign-up span {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: #ffffff;
+    display: block;
+    margin-top: 3px;
+}
+
+.sign-up {
+    position: relative;
+}
+
+.sign-up input, .sign-up button {
+    display: inline-block;
+}
+
+.sign-up input {
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #ffffff;
+    /*cancel default "input" styling*/
+    border: 0;
+    width: 204px;
+    padding: 18px;
+    border-radius: 3px 0 0 3px;
+    background: #3d3d3d;
+}
+
+.sign-up button {
+    background: #505050;
+    /*cancel default "button" styling*/
+    border: 0;
+    cursor: pointer;
+    width: 60px;
+    height: 53px;
+    position: absolute;
+    top: 0;
+    right: -60px;
+    border-radius: 0 3px 3px 0;
+}
+
+.sign-up button::after {
+    content: "";
+    border-style: solid;
+    border-width: 12px 0 12px 12px;
+    border-color: transparent transparent transparent #000000;
+    position: absolute;
+    top: 14px;
+    right: 23px;
+}
+
+.footer-contact-info {
+    width: 1162px;
+    margin: 0 auto;
+    padding: 49px 0 80px 118px;
+    background-color: #000000;
+}
+
+.footer-contacts, .footer-social, .footer-company, .footer-support {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-contacts {
+    margin-right: 121px;
+}
+
+.footer-social {
+    margin-right: 283px;
+}
+
+.footer-company {
+    margin-right: 58px;
+}
+
+.footer-contacts h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    color: #ffffff;
+    text-decoration: line-through;
+    display: block;
+    margin-bottom: 9px;
+}
+
+.footer-contacts span, .footer-email, .footer-copyright {
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: #606060;
+    display: block;
+}
+
+.payment-btn {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+    margin-top: 16px;
+    margin-bottom: 47px;
+}
+
+.payment-btn-paypal {
+    width: 32px;
+    height: 21px;
+    background: #000000 url("../img/paypal.png") no-repeat center;
+    margin-right: 22px;
+}
+
+.payment-btn-mastercard {
+    width: 32px;
+    height: 21px;
+    background: #000000 url("../img/mastercard.png") no-repeat center;
+    margin-right: 27px;
+}
+
+.payment-btn-visa {
+    width: 32px;
+    height: 21px;
+    background: #000000 url("../img/visa.png") no-repeat center;
+}
+
+.social-btn {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+    text-decoration: none;
+}
+
+.social-btn-fb {
+    width: 8px;
+    height: 16px;
+    background: #000000 url("../img/facebook.png") no-repeat center;
+    margin-right: 36px;
+}
+
+.social-btn-tw {
+    width: 19px;
+    height: 15px;
+    background: #000000 url("../img/twitter.png") no-repeat center;
+    margin-right: 30px;
+}
+
+.social-btn-ig {
+    width: 16px;
+    height: 17px;
+    background: #000000 url("../img/instagram.png") no-repeat center;
+    margin-right: 35px;
+}
+
+.social-btn-rss {
+    width: 16px;
+    height: 16px;
+    background: #000000 url("../img/rss.png") no-repeat center;
+}
+
+.social-btn:hover {
+    cursor: pointer;
+}
+
+.footer-company span, .footer-support span {
+    font-family: "SanFrancisco";
+    font-size: 14px;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.footer-company li, .footer-support li {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-company a, .footer-support a {
+    font-family: "SanFrancisco";
+    font-size: 12px;
+    color: #606060;
+}

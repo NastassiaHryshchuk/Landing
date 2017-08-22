@@ -1,0 +1,1426 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: $page-background;
+    color: $text-color-dark;
+}
+@font-face {
+    font-family: "SanFrancisco";
+    src: url("../fonts/sanfranciscodisplay-regular-webfont.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SanFrancisco";
+    src: url("../fonts/sanfranciscodisplay-bold-webfont.woff");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/OpenSansSemiBold.woff");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/OpenSansSemiBoldItalic.woff");
+    font-weight: bold;
+    font-style: italic;
+}
+
+a {
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: $text-color-light;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.number-of-news,
+button,
+h2,
+h3,
+span {
+    font-family: "SanFrancisco";
+}
+
+.price {
+    font-family: "SanFrancisco";
+    font-size: 14px;
+    color: $text-color-dark;
+}
+
+.user-block {
+    width: 1215px;
+    margin: 0 auto;
+    padding: 10px 35px 13px 30px;
+    background-color: $header-color-top;
+
+    &-left {
+        float: left;
+    }
+
+    &-right {
+        margin: 0;
+        padding: 0;
+        float: right;
+    }
+}
+
+.icon-men {
+    margin-right: 7px;
+}
+
+.login {
+    margin-right: 10px;
+    position: relative;
+
+    &:after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 9px;
+        background-color: $element-light;
+        position: absolute;
+        left: 38px;
+        bottom: 4px;
+    }
+}
+
+.cart {
+    margin: 0;
+    padding: 0;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+}
+
+.items-in-cart {
+    display: inline-block;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background: $accent-color;
+    border-radius: 50%;
+    margin-right: 7px;
+    text-align: center;
+    font-family: "OpenSans";
+    font-size: 10px;
+    line-height: 20px;
+    color: $text-color-dark;
+    display: inline-block;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.conteiner {
+    width: 1217px;
+    margin: 0 auto;
+    padding: 19px 30px 15px 33px;
+    background-color: $header-color-nav;
+
+    &-block-left {
+        float: left;
+    }
+
+    &-block-right {
+        float: right;
+    }
+}
+
+.store-name {
+    h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 25px;
+        color: $text-color-dark;
+        text-decoration: line-through;
+    }
+
+    span {
+        font-size: 11px;
+        color: $forIE8;
+        color: rgba(0, 0, 0, 0.50);
+        display: block;
+        margin-top: -2px;
+    }
+}
+
+.main-navigation {
+    display: inline-block;
+    margin-right: 30px;
+    /*horizontal alignment the following blocks: Clothing/Sneakers/Blog/SayHello*/
+    > ul > li {
+        display: inline-block;
+    }
+}
+/*menu styling: Clothing/Sneakers/Blog/SayHello*/
+%menu-link {
+    font-family: "SanFrancisco";
+    font-size: 14px;
+    padding: 10px;
+    display: block;
+    transition: 0.5s;
+}
+
+.menu-list {
+    position: relative;
+    width: 100px;
+
+    a {
+        @extend %menu-link;
+        color: $text-color-dark;
+
+        &:hover {
+            background: $forIE8;
+            background: rgba(0, 0, 0, 0.10);
+            border-radius: 3px;
+            border-bottom: 1px solid $element-light;
+            color: $text-color-light;
+            padding: 10px 0 10px 5px;
+        }
+    }
+}
+/*menu-drop styling*/
+.menu-drop {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-top: 3px solid transparent;
+
+    a {
+        &:hover {
+            background: $drop-light;
+            padding: 10px 0 10px 5px;
+        }
+    }
+
+    > li > a {
+        @extend %menu-link;
+        color: $text-color-light;
+        background: $drop-dark;
+        border-radius: 3px;
+        border-bottom: 1px solid $drop-light;
+    }
+}
+/*z-index=10 visualizes a menu-drop ABOVE a slaider "gallery"*/
+.menu-list:hover {
+    .menu-drop {
+        opacity: 1;
+        left: 0;
+        position: absolute;
+        z-index: 10;
+    }
+}
+/*triangles drawing*/
+%triangle {
+    &::after {
+        content: "";
+        border-style: solid;
+        border-width: 6px 6px 0 6px;
+        border-color: $element-dark transparent transparent transparent;
+        position: absolute;
+        top: 16px;
+        right: 12px;
+    }
+    /*triangles rotation*/
+    &:hover::after {
+        transform: scaley(-1);
+        border-color: $element-light transparent transparent transparent;
+    }
+}
+
+.clothing {
+    @extend %triangle;
+}
+
+.sneakers {
+    @extend %triangle;
+}
+
+.search {
+    display: inline-block;
+    height: 45px;
+}
+
+input[name="search"] {
+    position: relative;
+    width: 205px;
+    min-height: 30px;
+    background: $forIE8;
+    background: rgba(0, 0, 0, 0.10);
+    border: 0;
+    border-radius: 3px;
+    padding: 5px 50px 5px 20px;
+    font-family: "SanFrancisco";
+    font-size: 14px;
+    color: $text-color-dark;
+}
+/*loup icon drawing*/
+.loupe {
+    width: 10px;
+    height: 10px;
+    border: 3px solid $element-dark;
+    border-radius: 50%;
+    position: relative;
+    right: -245px;
+    top: -29px;
+
+    &::after {
+        content: "";
+        width: 9px;
+        height: 3px;
+        position: absolute;
+        right: -8px;
+        bottom: -4px;
+        background: $element-dark;
+        transform: rotate(45deg);
+    }
+}
+/*z-index=0 -> menu-drop is ABOVE a slaider "gallery"*/
+.gallery {
+    width: 1280px;
+    min-height: 680px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    z-index: 0;
+    /*radio buttons are hidden*/
+    > input {
+        display: none;
+
+        &:checked+label {
+            background: $accent-color;
+        }
+        /*target buttons styling, position:relative is used as z-index DOES NOT WORK with position:absolute, z-index=100 allows the target bittons be above "img"*/
+        +label {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 4px;
+            background: $btn-border;
+            border: 2px solid $btn-border;
+            cursor: pointer;
+            position: relative;
+            top: 320px;
+            left: -250px;
+            margin-right: 10px;
+            transition: background 0.8s ease-out 0s;
+            z-index: 100;
+
+            &:hover {
+                background: $element-light;
+            }
+        }
+    }
+    /*set the "div" size which contains "img"*/
+    > div {
+        width: 1280px;
+        min-height: 680px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        /*"img" is absolutely switched off and does not respond to mouse clicks*/
+        visibility: hidden;
+        /*"img" is transparent*/
+        opacity: 0;
+        transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 1s;
+
+        > .title {
+            width: 380px;
+            height: 180px;
+            background: $gallery-color-light;
+            position: absolute;
+            top: 302px;
+            left: 118px;
+            text-align: center;
+            color: $text-color-dark;
+        }
+    }
+
+    > input:checked+label+div {
+        visibility: visible;
+        /*"img" is visible*/
+        opacity: 1;
+        transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
+    }
+}
+
+.title {
+    h2 {
+        display: block;
+        width: 279px;
+        min-height: 100px;
+        text-align: left;
+        padding-left: 30px;
+        padding-top: 17px;
+        font-size: 40px;
+        color: $text-color-dark;
+    }
+
+    span {
+        position: absolute;
+        left: 30px;
+        top: 21px;
+        font-family: "OpenSans";
+        font-size: 12px;
+        color: $text-color-brend;
+    }
+}
+
+.btn {
+    background: $btn-next-prev;
+    /*cancel default "button" styling*/
+    border: 0;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover {
+        background: $accent-color;
+    }
+}
+
+%triangle-btn {
+    content: "";
+    border-style: solid;
+    position: absolute;
+    top: 16px;
+    right: 18px;
+}
+/*button that switches the slides forward*/
+.next {
+    position: absolute;
+    top: 302px;
+    left: 497px;
+    border-radius: 0 3px 0 0;
+
+    &::after {
+        @extend %triangle-btn;
+        border-width: 6px 0 6px 6px;
+        border-color: transparent transparent transparent $element-dark;
+    }
+}
+/*button that switches the slides back*/
+.prev {
+    position: absolute;
+    top: 346px;
+    left: 497px;
+    border-radius: 0 0 3px 0;
+
+    &::after {
+        @extend %triangle-btn;
+        border-width: 6px 6px 6px 0;
+        border-color: transparent $element-dark transparent transparent;
+    }
+}
+
+.view-product {
+    font-family: "SanFrancisco";
+    font-size: 14px;
+    color: $accent-color;
+    padding: 21px 100px 21px 38px;
+    background: $element-dark;
+    border-radius: 0 0 3px 3px;
+    position: absolute;
+    top: 486px;
+    left: 118px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover {
+        color: $text-color-dark;
+        background: $accent-color;
+    }
+
+    &::after {
+        content: "";
+        border-style: solid;
+        border-width: 6px 0 6px 6px;
+        border-color: transparent transparent transparent $accent-color;
+        position: absolute;
+        top: 24px;
+        right: 27px;
+    }
+}
+/*the main content of the page*/
+.content {
+    width: 1042px;
+    margin: 0 auto;
+    padding: 74px 120px 72px 118px;
+    background-color: $page-background;
+}
+
+.featured-products {
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-bottom: 47px;
+    font-family: "SanFrancisco";
+    font-size: 30px;
+    color: $text-color-dark;
+}
+
+.footwear {
+    width: 506px;
+    margin-bottom: 22px;
+    float: left;
+}
+
+%price-label {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    display: block;
+    padding: 2px 15px 2px 11px;
+    background-color: $accent-color;
+    border-radius: 0 15px 15px 0;
+    color: $text-color-dark;
+}
+
+%price-label-long {
+    position: absolute;
+    top: 12px;
+    left: 100px;
+    display: block;
+    width: 45px;
+    padding-left: 71px;
+    padding-bottom: 2px;
+    background-color: $accent-color;
+    border-radius: 0 15px 15px 0;
+    z-index: -1;
+}
+
+%button-order {
+    width: 116px;
+    height: 25px;
+    border: 1px solid $btn-border;
+    border-radius: 15px;
+    display: block;
+    background-color: $element-light;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 10px;
+    color: $text-color-dark;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+%button-cart {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 10px;
+    top: 6px;
+}
+
+%button-line {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 23px;
+    background-color: $btn-border;
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.product-1 {
+    width: 496px;
+    height: 308px;
+    padding-right: 10px;
+    margin-bottom: 39px;
+    background-color: $gallery-color-light;
+    position: relative;
+
+    img {
+        width: 284px;
+        height: 219px;
+        float: left;
+        position: relative;
+        top: 54px;
+        left: 0;
+    }
+
+    > .price {
+        @extend %price-label;
+    }
+
+    button {
+        @extend %button-order;
+        margin-top: 16px;
+    }
+
+    &-description {
+        width: 185px;
+        margin-top: 37px;
+        float: left;
+
+        span {
+            font-family: "OpenSans";
+            font-size: 12px;
+            color: $text-color-brend;
+        }
+
+        h3 {
+            display: block;
+            margin-top: 8px;
+            margin-bottom: 12px;
+            font-size: 20px;
+            color: $text-color-dark;
+        }
+
+        a {
+            font-size: 12px;
+            color: $text-color-dark;
+        }
+
+        button {
+            > img {
+                @extend %button-cart;
+            }
+        }
+
+        > button::before {
+            @extend %button-line;
+        }
+    }
+}
+
+.product-2 {
+    width: 239px;
+    padding-bottom: 14px;
+    background-color: $gallery-color-light;
+    float: left;
+    position: relative;
+
+    img {
+        width: 239px;
+        height: 219px;
+        display: block;
+    }
+
+    span {
+        padding: 3px 14px;
+        display: block;
+        text-align: center;
+        background: $gallery-color-light;
+        border-radius: 40px;
+        font-family: "OpenSans";
+        font-size: 12px;
+        color: $text-color-brend;
+        position: absolute;
+        top: 22px;
+        left: 66px;
+    }
+
+    h3 {
+        display: block;
+        text-align: center;
+        margin-top: 14px;
+        margin-bottom: 12px;
+        font-size: 20px;
+        color: $text-color-dark;
+    }
+
+    button {
+        @extend %button-order;
+        margin: 0 auto;
+
+        > img {
+            @extend %button-cart;
+        }
+    }
+
+    > button::before {
+        @extend %button-line;
+    }
+}
+
+.product-3 {
+    width: 239px;
+    padding-bottom: 14px;
+    background-color: $gallery-color-dark;
+    float: right;
+    position: relative;
+    padding-top: 31px;
+
+    img {
+        width: 239px;
+        height: 189px;
+        display: block;
+    }
+
+    > .adidas {
+        display: block;
+        text-align: center;
+        background: $gallery-color-light;
+        border-radius: 40px;
+        padding: 3px 15px;
+        font-family: "OpenSans";
+        font-size: 12px;
+        color: $text-color-brend;
+        position: absolute;
+        top: 24px;
+        left: 72px;
+    }
+
+    h3 {
+        display: block;
+        text-align: center;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        font-size: 20px;
+        color: $text-color-dark;
+    }
+
+    > .price {
+        @extend %price-label;
+    }
+
+    button {
+        @extend %button-order;
+        margin: 0 auto;
+        background-color: gallery-color-dark;
+
+        > img {
+            @extend %button-cart;
+        }
+    }
+
+    > button::before {
+        @extend %button-line;
+    }
+}
+
+.product-4 {
+    display: inline-block;
+    text-align: center;
+    margin-right: 222px;
+
+    h3 {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 16px;
+        font-size: 18px;
+        color: $text-color-dark;
+    }
+
+    &-photo {
+        width: 236px;
+        height: 120px;
+        position: absolute;
+        top: 16px;
+        left: 60px;
+        z-index: 2;
+
+        > .price {
+            @extend %price-label-long;
+        }
+    }
+
+    button {
+        @extend %button-order;
+        margin: 0 auto;
+
+        > img {
+            @extend %button-cart;
+        }
+    }
+
+    > button::before {
+        @extend %button-line;
+    }
+}
+
+.product-5 {
+    display: inline-block;
+    text-align: center;
+    margin-right: 222px;
+
+    h3 {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 16px;
+        font-size: 18px;
+        color: $text-color-dark;
+    }
+
+    &-photo {
+        width: 219px;
+        height: 113px;
+        position: absolute;
+        top: 20px;
+        left: 400px;
+        z-index: 2;
+
+        > .price {
+            @extend %price-label-long;
+        }
+    }
+
+    button {
+        @extend %button-order;
+        margin: 0 auto;
+
+        > img {
+            @extend %button-cart;
+        }
+    }
+
+    > button::before {
+        @extend %button-line;
+    }
+}
+
+.product-6 {
+    display: inline-block;
+    text-align: center;
+
+    h3 {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 16px;
+        font-size: 18px;
+        color: $text-color-dark;
+    }
+
+    &-photo {
+        width: 201px;
+        height: 113px;
+        position: absolute;
+        top: 20px;
+        left: 750px;
+        z-index: 2;
+
+        > .price {
+            @extend %price-label-long;
+        }
+    }
+
+    button {
+        @extend %button-order;
+        margin: 0 auto;
+
+        > img {
+            @extend %button-cart;
+        }
+    }
+
+    > button::before {
+        @extend %button-line;
+    }
+}
+
+.cannon {
+    width: 506px;
+    margin: 0;
+    padding: 0;
+    float: right;
+    position: relative;
+
+    img {
+        width: 506px;
+        height: 654px;
+        display: block;
+    }
+
+    > .price {
+        @extend %price-label;
+    }
+
+    button {
+        @extend %button-order;
+    }
+
+    &-description {
+        padding: 15px 34px 16px 40px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $forIE8;
+        background: rgba(0, 0, 0, 0.50);
+
+        span {
+            font-family: "OpenSans";
+            font-size: 12px;
+            color: $text-color-brend;
+        }
+
+        h3 {
+            display: block;
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 30px;
+            line-height: 32px;
+            color: $text-color-light;
+        }
+
+        button {
+            margin-top: 16px;
+            background: $forIE8;
+            background: rgba(0, 0, 0, 0.50);
+            color: $text-color-light;
+
+            > img {
+                @extend %button-cart;
+            }
+        }
+
+        > button::before {
+            @extend %button-line;
+        }
+    }
+}
+
+.stefan-janoski {
+    width: 1042px;
+    padding-bottom: 110px;
+    position: relative;
+
+    > img {
+        width: 1042px;
+        height: 495px;
+        display: block;
+    }
+
+    > img+button {
+        display: inline-block;
+        position: absolute;
+        top: 143px;
+        left: 480px;
+        background: #1a1a1a;
+        opacity: 0.9;
+        border: 0;
+        border-radius: 40px;
+        width: 98px;
+        height: 23px;
+        font-family: "OpenSans";
+        font-size: 12px;
+        color: $accent-color;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+            opacity: 1;
+            color: $text-color-light;
+        }
+    }
+
+    > button+span {
+        display: inline-block;
+        position: absolute;
+        top: 175px;
+        left: 225px;
+        font-family: "SanFrancisco";
+        font-size: 60px;
+        color: $accent-color;
+    }
+}
+
+.product-4-5-6-photo {
+    width: 980px;
+    height: 120px;
+    padding: 12px 0 12px 62px;
+    position: absolute;
+    bottom: 190px;
+    left: 0;
+    /*in case if rgba does not work*/
+    background: $gallery-color-dark;
+    /*for IE8*/
+    background: rgba(255, 255, 255, 0.64);
+}
+
+.product-4-5-6 {
+    padding: 10px 0 12px 117px;
+    background-color: $gallery-color-light;
+}
+
+.spring-preview {
+    width: 1280px;
+    margin-bottom: 65px;
+    position: relative;
+    left: -118px;
+
+    .img {
+        width: 1280px;
+        height: 550px;
+        background: url("../img/spring-2016-preview.png") no-repeat center top;
+        background-size: cover;
+    }
+
+    span {
+        display: inline-block;
+        position: absolute;
+        top: 180px;
+        left: 360px;
+        font-size: 60px;
+        color: $text-color-light;
+    }
+
+    > a {
+        display: inline-block;
+        width: 730px;
+        text-align: center;
+        position: absolute;
+        top: 270px;
+        left: 280px;
+        font-size: 22px;
+    }
+
+    button {
+        display: inline-block;
+        position: absolute;
+        top: 355px;
+        left: 570px;
+        background: $accent-color;
+        opacity: 0.9;
+        border: 0;
+        border-radius: 40px;
+        width: 139px;
+        height: 29px;
+        font-size: 10px;
+        color: $text-color-dark;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+            opacity: 1;
+            color: $text-color-light;
+        }
+    }
+
+    .img-overlay {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 216, 0, 0.2);
+    }
+}
+
+.latest-news {
+    span {
+        margin: 0;
+        padding: 0;
+        display: block;
+        margin-bottom: 40px;
+        text-align: center;
+        font-size: 30px;
+        color: $text-color-dark;
+    }
+
+    button {
+        background: $accent-color;
+        opacity: 0.9;
+        border: 0;
+        border-radius: 3px;
+        width: 1041px;
+        height: 48px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+            opacity: 1;
+            color: $text-color-light;
+        }
+    }
+}
+
+%news-block {
+    width: 328px;
+    background: $gallery-color-light;
+    position: relative;
+}
+
+%news-img {
+    width: 328px;
+    height: 210px;
+    display: block;
+}
+
+%news-label {
+    margin: 0;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    padding: 2px 20px 4px 15px;
+    border-radius: 0 15px 15px 0;
+    font-size: 14px;
+    color: $text-color-light;
+}
+
+%news-h3 {
+    margin: 0;
+    display: block;
+    /*"height" is neсessary to align "a" */
+    height: 56px;
+    padding: 14px 18px 0 60px;
+    font-size: 18px;
+    color: $text-color-dark;
+}
+
+%news-link {
+    margin: 0;
+    display: block;
+    padding-left: 60px;
+    padding-right: 18px;
+    padding-bottom: 16px;
+    font-size: 12px;
+    color: $text-color-dark;
+}
+
+.scate {
+    @extend %news-block;
+    float: left;
+    margin-right: 28px;
+    margin-bottom: 40px;
+
+    img {
+        @extend %news-img;
+    }
+
+    > img+span {
+        @extend %news-label;
+        background: $skate;
+    }
+
+    h3 {
+        @extend %news-h3;
+    }
+
+    a {
+        @extend %news-link;
+    }
+}
+
+.surf {
+    @extend %news-block;
+    float: left;
+    margin-right: 28px;
+    margin-bottom: 40px;
+
+    img {
+        @extend %news-img;
+    }
+
+    > img+span {
+        @extend %news-label;
+        background: $surf;
+    }
+
+    h3 {
+        @extend %news-h3;
+    }
+
+    a {
+        @extend %news-link;
+    }
+}
+
+.music {
+    @extend %news-block;
+    float: right;
+
+    img {
+        @extend %news-img;
+    }
+
+    > img+span {
+        @extend %news-label;
+        background: $music;
+    }
+
+    h3 {
+        @extend %news-h3;
+    }
+
+    a {
+        @extend %news-link;
+    }
+}
+
+.number-of-news {
+    padding: 3px 7px;
+    background: $accent-color;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 95px;
+    left: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: $text-color-dark;
+    transition: all 0.5s ease;
+
+    &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 8px solid $accent-color;
+        border-right: 8px solid transparent;
+        position: absolute;
+        top: 20px;
+        left: 5px;
+    }
+}
+
+.footer-sign-up {
+    width: 1004px;
+    margin: 0 auto;
+    padding: 37px 0 43px 276px;
+    background-color: $footer-color-top;
+
+    div {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 100px;
+    }
+
+    form {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+        font-family: "OpenSans";
+        font-size: 12px;
+        color: $text-color-footer;
+    }
+
+    span {
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+        color: $text-color-light;
+        display: block;
+        margin-top: 3px;
+    }
+}
+
+.sign-up {
+    position: relative;
+    width: 282px;
+    height: 52px;
+    border-radius: 3px;
+    overflow: hidden;
+
+    input {
+        font-family: "OpenSans";
+        font-size: 12px;
+        color: $text-color-light;
+        /*cancel default "input" styling*/
+        border: 0;
+        width: 186px;
+        padding: 20px;
+        background: #3d3d3d;
+        background: rgba(255,255,255,0.10);
+        float: left;
+    }
+
+    button {
+        background: #505050;
+        background: rgba(255,255,255,0.20);
+        /*cancel default "button" styling*/
+        border: 0;
+        cursor: pointer;
+        width: 56px;
+        height: 52px;
+        float: left;
+
+        &::after {
+            content: "";
+            border-style: solid;
+            border-width: 12px 0 12px 12px;
+            border-color: transparent transparent transparent $element-dark;
+            position: absolute;
+            top: 16px;
+            right: 21px;
+        }
+    }
+}
+
+.footer-contact-info {
+    width: 1162px;
+    margin: 0 auto;
+    padding: 49px 0 80px 118px;
+    background-color: $footer-color-contact;
+}
+
+.footer {
+    &-company {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 58px;
+
+        span {
+            font-family: "SanFrancisco";
+            font-size: 14px;
+            color: $text-color-light;
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        li {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        a {
+            font-family: "SanFrancisco";
+            font-size: 12px;
+            color: $text-color-footer;
+            transition: all 0.5s ease;
+            &:hover {
+                color: $text-color-light;
+            }
+        }
+    }
+
+    &-contacts {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 121px;
+
+        h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 25px;
+            color: $text-color-light;
+            text-decoration: line-through;
+            display: block;
+            margin-bottom: 9px;
+        }
+    }
+
+    &-social {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 283px;
+    }
+
+    &-support {
+        display: inline-block;
+        vertical-align: top;
+
+        span {
+            font-family: "SanFrancisco";
+            font-size: 14px;
+            color: $text-color-light;
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        li {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        a {
+            font-family: "SanFrancisco";
+            font-size: 12px;
+            color: $text-color-footer;
+            transition: all 0.5s ease;
+            &:hover {
+                color: $text-color-light;
+            }
+        }
+    }
+}
+
+.footer-contacts span,
+.footer-copyright,
+.footer-email {
+    font-family: "OpenSans";
+    font-size: 12px;
+    color: $text-color-footer;
+    display: block;
+    transition: all 0.5s ease;
+    &:hover {
+        color: $text-color-light;
+    }
+}
+
+.payment-btn {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+    margin-top: 16px;
+    margin-bottom: 47px;
+
+    &-paypal {
+        width: 32px;
+        height: 21px;
+        background: $footer-color-contact url("../img/paypal.png") no-repeat center;
+        margin-right: 22px;
+    }
+
+    &-mastercard {
+        width: 32px;
+        height: 21px;
+        background: $footer-color-contact url("../img/mastercard.png") no-repeat center;
+        margin-right: 27px;
+    }
+
+    &-visa {
+        width: 32px;
+        height: 21px;
+        background: $footer-color-contact url("../img/visa.png") no-repeat center;
+    }
+}
+
+.social-btn {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+    text-decoration: none;
+
+    &-fb {
+        width: 8px;
+        height: 16px;
+        background: $footer-color-contact url("../img/facebook.png") no-repeat center;
+        margin-right: 36px;
+    }
+
+    &-tw {
+        width: 19px;
+        height: 15px;
+        background: $footer-color-contact url("../img/twitter.png") no-repeat center;
+        margin-right: 30px;
+    }
+
+    &-ig {
+        width: 16px;
+        height: 17px;
+        background: $footer-color-contact url("../img/instagram.png") no-repeat center;
+        margin-right: 35px;
+    }
+
+    &-rss {
+        width: 16px;
+        height: 16px;
+        background: $footer-color-contact url("../img/rss.png") no-repeat center;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
